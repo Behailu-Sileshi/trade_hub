@@ -6,6 +6,7 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 class UserAdmin(BaseUserAdmin):
     list_display = ('email', 'first_name', 'last_name', 'role')
     list_filter = ('role',)
+    list_editable = ('role',)
     ordering = ('email',)
     search_fields = ('email', 'first_name', 'last_name')
     fieldsets = (
